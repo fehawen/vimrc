@@ -1,0 +1,7 @@
+vimrc
+=====
+
+Vim configuration.
+
+Run `./install.sh` to symlink to `~/.vimrc`, backing up any existing config to
+`~/.vimrc.backup`.
