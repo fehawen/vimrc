@@ -91,10 +91,9 @@ au VimResized * wincmd=
 au BufWritePre * %s/\s\+$//e
 au StdinReadPre * let s:std_in=1
 au VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-au WinEnter,BufEnter * call matchadd('ColorColumn', '\%81v', 100)
+au WinEnter,BufEnter * call matchadd('ColorColumn', &ft == 'python' ? '\%73v' : '\%81v', 100)
 au WinLeave,BufLeave * call clearmatches()
 au FileType c,cpp setlocal noexpandtab softtabstop=4 shiftwidth=4
-au FileType python setlocal textwidth=79
 
 au BufNewFile,BufRead *.ts set filetype=typescript
 au BufNewFile,BufRead *.tsx set filetype=typescript
