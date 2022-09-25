@@ -8,6 +8,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'dense-analysis/ale'
 Plug 'scrooloose/nerdtree'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'fehawen/sc.vim'
 Plug 'fehawen/sl.vim'
 
@@ -83,6 +84,15 @@ let g:NERDTreeWinSize = 31
 
 let g:typescript_indent_disable = 1
 
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_generate_tags = 1
+
 let g:sc_background_light = 1
 let g:sc_highlight_comments_only = 0
 let g:sl_hide_syntax_item = 1
@@ -96,7 +106,7 @@ au StdinReadPre * let s:std_in=1
 au VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 au WinEnter,BufEnter * call matchadd('ColorColumn', &ft == 'python' ? '\%73v' : '\%81v', 100)
 au WinLeave,BufLeave * call clearmatches()
-au FileType c,cpp setlocal noexpandtab softtabstop=4 shiftwidth=4
+au FileType c,cpp,go setlocal noexpandtab softtabstop=4 shiftwidth=4
 
 au BufNewFile,BufRead *.ts set filetype=typescript
 au BufNewFile,BufRead *.tsx set filetype=typescript
