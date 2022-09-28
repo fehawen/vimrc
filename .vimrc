@@ -47,9 +47,7 @@ set wrap
 set pumheight=10
 set nobackup
 set nowritebackup
-
-" We actually want a swap file sometimes.
-" set noswapfile
+set noswapfile
 
 set maxmempattern=20000
 set completeopt-=preview
