@@ -34,7 +34,6 @@ set mat=2
 set magic
 set signcolumn=no
 set hlsearch
-set tabstop=4
 set softtabstop=4
 set expandtab
 set shiftwidth=4
@@ -104,7 +103,8 @@ au StdinReadPre * let s:std_in=1
 au VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 au WinEnter,BufEnter * call matchadd('ColorColumn', &ft == 'python' ? '\%73v' : '\%81v', 100)
 au WinLeave,BufLeave * call clearmatches()
-au FileType c,cpp,go setlocal noexpandtab softtabstop=4 shiftwidth=4
+au FileType c,cpp,go setlocal noexpandtab softtabstop=8 shiftwidth=8
+au FileType yaml setlocal softtabstop=2 shiftwidth=2
 
 au BufNewFile,BufRead *.ts set filetype=typescript
 au BufNewFile,BufRead *.tsx set filetype=typescript
