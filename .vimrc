@@ -18,19 +18,9 @@ call plug#end()
 " https://vimhelp.org/term.txt.html
 " set t_md=
 
-" E.g. t_Co etc must come before 'syntax on'
+" Must come before 'syntax on'
 " https://vimdoc.sourceforge.net/htmldoc/syntax.html#xterm-color
-if &term =~ "xterm"
-    if has("terminfo")
-        set t_Co=8
-        set t_Sf=<Esc>[3%p1%dm
-        set t_Sb=<Esc>[4%p1%dm
-    else
-        set t_Co=8
-        set t_Sf=<Esc>[3%dm
-        set t_Sb=<Esc>[4%dm
-    endif
-endif
+set t_Co=16
 
 syntax on
 filetype on
