@@ -8,6 +8,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'dense-analysis/ale'
 Plug 'scrooloose/nerdtree'
+Plug 'leafgarland/typescript-vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'fehawen/sc.vim'
 Plug 'fehawen/sl.vim'
@@ -20,7 +21,7 @@ call plug#end()
 
 " Must come before 'syntax on'
 " https://vimdoc.sourceforge.net/htmldoc/syntax.html#xterm-color
-set t_Co=16
+set t_Co=8
 
 syntax on
 filetype on
@@ -31,7 +32,7 @@ scriptencoding utf-8
 set encoding=utf-8
 
 set title
-set noshowmode
+" set noshowmode
 set autoread
 set ruler
 set showmatch
@@ -55,7 +56,6 @@ set noswapfile
 
 set maxmempattern=20000
 set completeopt-=preview
-set omnifunc=syntaxcomplete#Complete
 
 set path+=**
 set wildmenu
@@ -110,9 +110,14 @@ au WinEnter,BufEnter * call matchadd('ColorColumn', &ft == 'python' ? '\%73v' : 
 au WinLeave,BufLeave * call clearmatches()
 au FileType c,cpp,go setlocal noexpandtab softtabstop=8 shiftwidth=8
 au FileType yaml setlocal softtabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.ts,*.tsx set filetype=typescript
 
-au BufNewFile,BufRead *.ts set filetype=typescript
-au BufNewFile,BufRead *.tsx set filetype=typescript
+if has("autocmd") && exists("+omnifunc")
+    autocmd Filetype *
+        \   if &omnifunc == "" |
+        \       setlocal omnifunc=syntaxcomplete#Complete |
+        \   endif
+endif
 
 inoremap <expr><S-TAB> pumvisible() ? "\<Esc>" : "\<C-n>"
 map <C-n> :NERDTreeToggle<CR>
