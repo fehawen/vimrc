@@ -8,7 +8,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'dense-analysis/ale'
 Plug 'scrooloose/nerdtree'
-Plug 'leafgarland/typescript-vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'fehawen/sc.vim'
 Plug 'fehawen/sl.vim'
@@ -110,7 +109,6 @@ au WinEnter,BufEnter * call matchadd('ColorColumn', &ft == 'python' ? '\%73v' : 
 au WinLeave,BufLeave * call clearmatches()
 au FileType c,cpp,go setlocal noexpandtab softtabstop=8 shiftwidth=8
 au FileType yaml setlocal softtabstop=2 shiftwidth=2
-au BufNewFile,BufRead *.ts,*.tsx set filetype=typescript
 
 if has("autocmd") && exists("+omnifunc")
     autocmd Filetype *
