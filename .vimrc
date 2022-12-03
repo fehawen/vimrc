@@ -124,7 +124,8 @@ map <C-s> :vert ter<CR>
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 nmap <silent> <C-h> :ALEHover<CR>
-nmap <silent> <C-d> :ALEGoToDefinition<CR>
+nnoremap <silent> gt :ALEGoToDefinition<CR>
+nnoremap <silent> gr :ALEFindReferences<CR>
 map <Tab> :noh<CR>
 tnoremap <Esc> <C-\><C-n>
 map § <Esc>
