@@ -30,6 +30,7 @@ filetype indent on
 scriptencoding utf-8
 set encoding=utf-8
 
+set backspace=indent,eol,start
 set title
 set autoread
 set showmatch
@@ -63,11 +64,11 @@ set fillchars=vert:│,fold:┄,diff:╱
 set listchars=tab:⋮\ ,trail:⎵,eol:·,precedes:◂,extends:▸
 set showbreak=↪
 
-let g:ale_sign_info = "⚠"
-let g:ale_sign_error = "⚠"
-let g:ale_sign_warning = "⚠"
-let g:ale_sign_style_error = "⚠"
-let g:ale_sign_style_warning = "⚠"
+let g:ale_sign_info = "⬤"
+let g:ale_sign_error = "⬤"
+let g:ale_sign_warning = "⬤"
+let g:ale_sign_style_error = "⬤"
+let g:ale_sign_style_warning = "⬤"
 let g:ale_completion_enabled = 1
 
 let g:NERDTreeMinimalUI = 1
@@ -85,7 +86,7 @@ let g:go_highlight_extra_types = 1
 let g:go_highlight_build_constraints = 1
 let g:go_highlight_generate_tags = 1
 
-let g:sl_hide_syntax_item = 1
+let g:sl_hide_syntax_item = 0
 let g:sl_hide_file_type = 1
 
 colorscheme sc
