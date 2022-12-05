@@ -20,7 +20,7 @@ call plug#end()
 
 " Must come before 'syntax on'
 " https://vimdoc.sourceforge.net/htmldoc/syntax.html#xterm-color
-set t_Co=8
+" set t_Co=8
 
 syntax on
 filetype on
@@ -31,19 +31,16 @@ scriptencoding utf-8
 set encoding=utf-8
 
 set title
-" set noshowmode
 set autoread
-set ruler
 set showmatch
 set mat=2
 set magic
-set signcolumn=no
 set hlsearch
 set softtabstop=4
 set expandtab
 set shiftwidth=4
 set autoindent
-set nonumber
+set number
 set cursorline
 set nocursorcolumn
 set ffs=unix,dos,mac
@@ -62,28 +59,22 @@ set wildignore+=**/node_modules/**
 set wildignore+=**/.git/**
 
 set list
-set listchars=
-set listchars+=tab:│\ ,
-set listchars+=trail:•,
-set fillchars+=vert:\ ,
+set fillchars=vert:│,fold:┄,diff:╱
+set listchars=tab:⋮\ ,trail:⎵,eol:·,precedes:◂,extends:▸
+set showbreak=↪
 
-let g:ale_sign_info = "•"
-let g:ale_sign_error = "•"
-let g:ale_sign_warning = "•"
-let g:ale_sign_style_error = "•"
-let g:ale_sign_style_warning = "•"
+let g:ale_sign_info = "⚠"
+let g:ale_sign_error = "⚠"
+let g:ale_sign_warning = "⚠"
+let g:ale_sign_style_error = "⚠"
+let g:ale_sign_style_warning = "⚠"
 let g:ale_completion_enabled = 1
 
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeShowLineNumbers = 0
 let g:NERDTreeCascadeSingleChildDir = 0
-let g:NERDTreeNodeDelimiter = "\u00a0"
-let g:NERDTreeDirArrowExpandable = "•"
-let g:NERDTreeDirArrowCollapsible = "•"
 let g:NERDTreeWinSize = 31
-
-let g:typescript_indent_disable = 1
 
 let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
@@ -94,8 +85,6 @@ let g:go_highlight_extra_types = 1
 let g:go_highlight_build_constraints = 1
 let g:go_highlight_generate_tags = 1
 
-let g:sc_background_light = 1
-let g:sc_highlight_comments_only = 0
 let g:sl_hide_syntax_item = 1
 let g:sl_hide_file_type = 1
 
