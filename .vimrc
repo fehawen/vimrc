@@ -9,7 +9,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'dense-analysis/ale'
 Plug 'scrooloose/nerdtree'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'fehawen/nc.vim'
+Plug 'fehawen/sc.vim'
 Plug 'fehawen/sl.vim'
 
 call plug#end()
@@ -60,23 +60,21 @@ set wildignore+=**/node_modules/**
 set wildignore+=**/.git/**
 
 set list
-set fillchars=vert:\ ,fold:┄,diff:╱
+set fillchars=vert:│,fold:┄,diff:╱
 set listchars=tab:⋮\ ,trail:⎵,eol:·,precedes:◂,extends:▸
 set showbreak=↪
 
-let g:ale_sign_info = "•"
-let g:ale_sign_error = "•"
-let g:ale_sign_warning = "•"
-let g:ale_sign_style_error = "•"
-let g:ale_sign_style_warning = "•"
+let g:ale_sign_info = "⬤"
+let g:ale_sign_error = "⬤"
+let g:ale_sign_warning = "⬤"
+let g:ale_sign_style_error = "⬤"
+let g:ale_sign_style_warning = "⬤"
 let g:ale_completion_enabled = 1
 
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeShowLineNumbers = 0
 let g:NERDTreeCascadeSingleChildDir = 0
-let g:NERDTreeDirArrowExpandable = "•"
-let g:NERDTreeDirArrowCollapsible = "•"
 let g:NERDTreeWinSize = 31
 
 let g:go_highlight_types = 1
@@ -91,7 +89,7 @@ let g:go_highlight_generate_tags = 1
 let g:sl_hide_syntax_item = 1
 let g:sl_hide_file_type = 1
 
-colorscheme nc
+colorscheme sc
 
 au VimResized * wincmd=
 au BufWritePre * %s/\s\+$//e
