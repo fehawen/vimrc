@@ -64,11 +64,11 @@ set fillchars=vert:│,fold:┄,diff:╱
 set listchars=tab:⋮\ ,trail:⎵,eol:·,precedes:◂,extends:▸
 set showbreak=↪
 
-let g:ale_sign_info = "⬤"
-let g:ale_sign_error = "⬤"
-let g:ale_sign_warning = "⬤"
-let g:ale_sign_style_error = "⬤"
-let g:ale_sign_style_warning = "⬤"
+let g:ale_sign_info = "●"
+let g:ale_sign_error = "●"
+let g:ale_sign_warning = "●"
+let g:ale_sign_style_error = "●"
+let g:ale_sign_style_warning = "●"
 let g:ale_completion_enabled = 1
 
 let g:NERDTreeMinimalUI = 1
