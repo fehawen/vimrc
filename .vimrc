@@ -61,7 +61,7 @@ set wildignore+=**/.git/**
 
 set list
 set fillchars=vert:│,fold:┄,diff:╱
-set listchars=tab:⋮\ ,trail:⎵,eol:·,precedes:◂,extends:▸
+set listchars=tab:⋮\ ,trail:⎵
 set showbreak=↪
 
 let g:ale_sign_info = "●"
