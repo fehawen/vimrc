@@ -36,6 +36,7 @@ set autoread
 set showmatch
 set mat=2
 set magic
+set mouse=a
 set hlsearch
 set softtabstop=4
 set expandtab
