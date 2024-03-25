@@ -67,11 +67,6 @@ set fillchars=vert:│,fold:┄,diff:╱
 set listchars=tab:⋮\ ,trail:⎵
 set showbreak=↪
 
-" Allow reading .vimrc in current directory
-set exrc
-" Disables shell, autocmd and write command in .vimrc in current directory
-set secure
-
 let g:ale_sign_info = "●"
 let g:ale_sign_error = "●"
 let g:ale_sign_warning = "●"
