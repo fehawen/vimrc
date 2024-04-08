@@ -75,11 +75,11 @@ let g:ale_sign_style_warning = "●"
 let g:ale_completion_enabled = 1
 let g:ale_virtualtext_cursor = 0
 
-let g:ale_fixers = {
-\   'javascript': ['prettier'],
-\   'typescript': ['prettier'],
-\   'typescriptreact': ['prettier'],
-\}
+" let g:ale_fixers = {
+" \   'javascript': ['prettier'],
+" \   'typescript': ['prettier'],
+" \   'typescriptreact': ['prettier'],
+" \}
 
 " let g:ale_linters_explicit = 1
 " let g:ale_linters = {
