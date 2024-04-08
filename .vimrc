@@ -36,7 +36,7 @@ set autoread
 set showmatch
 set mat=2
 set magic
-set mouse=a
+set mouse=a " Yes, I'm sorry. Scroll wheels are convenient.
 set hlsearch
 set softtabstop=4
 set expandtab
@@ -71,6 +71,7 @@ let g:ale_sign_warning = "●"
 let g:ale_sign_style_error = "●"
 let g:ale_sign_style_warning = "●"
 let g:ale_completion_enabled = 1
+let g:ale_virtualtext_cursor = 0
 
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeShowHidden = 1
