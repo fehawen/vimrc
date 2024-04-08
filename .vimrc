@@ -51,6 +51,8 @@ set pumheight=10
 set nobackup
 set nowritebackup
 set noswapfile
+set mouse=a
+" set ttymouse=xterm
 
 set maxmempattern=20000
 set completeopt-=preview
@@ -72,6 +74,24 @@ let g:ale_sign_style_error = "●"
 let g:ale_sign_style_warning = "●"
 let g:ale_completion_enabled = 1
 let g:ale_virtualtext_cursor = 0
+
+let g:ale_fixers = {
+\   'javascript': ['prettier'],
+\   'typescript': ['prettier'],
+\   'typescriptreact': ['prettier'],
+\}
+
+" let g:ale_linters_explicit = 1
+" let g:ale_linters = {
+" \   'javascript': ['eslint'],
+" \   'typescript': ['eslint'],
+" \   'typescriptreact': ['eslint'],
+" \}
+
+let g:ale_fix_on_save = 1
+let g:ale_hover_to_floating_preview = 1
+let g:ale_floating_preview = 1
+let g:ale_floating_window_border = ['│', '─', '╭', '╮', '╯', '╰', '│', '─']
 
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeShowHidden = 1
