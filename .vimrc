@@ -36,7 +36,6 @@ set autoread
 set showmatch
 set mat=2
 set magic
-set mouse=a " Yes, I'm sorry. Scroll wheels are convenient.
 set hlsearch
 set softtabstop=4
 set expandtab
@@ -51,7 +50,6 @@ set pumheight=10
 set nobackup
 set nowritebackup
 set noswapfile
-set mouse=a
 " set ttymouse=xterm
 
 set maxmempattern=20000
